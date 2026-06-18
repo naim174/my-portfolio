@@ -3,36 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Naim — Flutter Developer</title>
+  <title>Md Naim Molla — Flutter Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav-inner">
-      <div class="brand">Md Naim Hasan</div>
-      <nav class="nav-links">
+      <div class="brand">Naim.Dev</div>
+      
+      <nav class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <div class="socials">
-        <a href="https://github.com/naim174" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/share/1DWoBHTJSi/"><i class="fab fa-facebook"></i></a>
-        <a href="http://www.linkedin.com/in/md-naim-241721363"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:naimmolla278@email.com"><i class="fas fa-envelope"></i></a>
+  <a href="https://github.com/naim174" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.facebook.com/share/1DWoBHTJSi/" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.instagram.com/naim_hasan0?utm_source=qr&igsh=OHkyOXBuaGJydG1i" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="http://www.linkedin.com/in/md-naim-241721363" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="mailto:naimmolla278@email.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+      <div id="hamburger" class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section id="home" class="hero">
     <div class="container hero-inner">
       <div class="hero-left">
         <h1 class="title">Hello, I'm <span class="gradient">Md Naim<br>Molla</span></h1>
-        <p class="subtitle">I'm a Flutter Developer</p>
+        <p class="subtitle">Professional Flutter Developer</p>
         <a class="btn" href="resume.pdf" download> <i class="fas fa-download"></i> Download Resume</a>
       </div>
       <div class="hero-right">
@@ -44,85 +53,118 @@
     </div>
   </section>
 
+  <!-- ABOUT & SKILLS SECTION -->
   <section id="about" class="about">
     <div class="container">
       <h2 class="sec-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text card">
-          <p>I am <strong>Md Naim Molla</strong>, a passionate Flutter developer with experience in API integration, Firebase, and UI/UX. I also have experience in IT support and Arduino projects.</p>
+          <p>I am <strong>Md Naim Molla</strong>, a passionate Flutter Developer specializing in building high-performance, scalable mobile applications. I have deep expertise in reactive state management, seamless API integration, and secure payment processing.</p>
+          <p>Whether it's an e-commerce platform or a utility tool, I focus on clean architecture, smooth UI/UX, and robust backend wiring.</p>
         </div>
         <div class="skills-grid">
-          <div class="skill card"><i class="fab fa-flutter"></i><span>Flutter</span></div>
-          <div class="skill card"><i class="fas fa-code"></i><span>Dart</span></div>
-          <div class="skill card"><i class="fas fa-database"></i><span>Firebase</span></div>
-          <div class="skill card"><i class="fas fa-microchip"></i><span>Arduino</span></div>
+          <div class="skill card"><i class="fab fa-flutter"></i><span>Flutter & Dart</span></div>
+          <div class="skill card"><i class="fas fa-project-diagram"></i><span>GetX (State)</span></div>
+          <div class="skill card"><i class="fas fa-exchange-alt"></i><span>Dio & REST APIs</span></div>
+          <div class="skill card"><i class="fas fa-credit-card"></i><span>Payment Gateways</span></div>
+          <div class="skill card"><i class="fas fa-database"></i><span>Firebase & Auth</span></div>
+          <div class="skill card"><i class="fas fa-microchip"></i><span>Arduino & IoT</span></div>
         </div>
       </div>
     </div>
   </section>
 
+ <!-- PROJECTS SECTION -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="sec-title">Projects</h2>
+      <h2 class="sec-title">Featured Projects</h2>
       <div class="projects-grid">
+        
+        <!-- Project 1: Daily Hisab -->
         <article class="project card">
-          <div class="project-thumb">NotesPad</div>
-          <h3>NotesPad</h3>
-          <p>Flutter note-taking app.</p>
-          <a class="link" href="https://github.com/naim174/NotesPad_App" target="_blank">GitHub</a>
+          <div class="project-thumb"><i class="fas fa-calculator" style="font-size: 35px;"></i></div>
+          <h3>Daily Hisab</h3>
+          <p>A personal expense ledger and finance utility app built with clean architecture using **GetX** controller for modern, reactive state tracking and efficient local database storage.</p>
+          <div class="project-tags"><span>Flutter</span><span>GetX</span><span>Local Database</span></div>
+          <a class="btn-small" href="https://github.com/naim174/daily_hisab_flutter" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </article>
+
+        <!-- Project 2: Weather App -->
         <article class="project card">
-          <div class="project-thumb">Money Manager</div>
+          <div class="project-thumb"><i class="fas fa-cloud-sun-rain" style="font-size: 35px;"></i></div>
+          <h3>Weather App</h3>
+          <p>Real-time weather tracking application leveraging **FutureBuilder** to fetch live dynamic data from weather REST APIs, featuring responsive location search and fluid layout transitions.</p>
+          <div class="project-tags"><span>REST API</span><span>FutureBuilder</span><span>JSON Parsing</span></div>
+          <a class="btn-small" href="https://github.com/naim174/Weather-App" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </article>
+
+        <!-- Project 3: Money Manager -->
+        <article class="project card">
+          <div class="project-thumb"><i class="fas fa-wallet" style="font-size: 35px;"></i></div>
           <h3>Money Manager</h3>
-          <p>Expense tracking app.</p>
-          <a class="link" href="https://github.com/naim174/money_manager" target="_blank">GitHub</a>
+          <p>An advanced expense tracking application built using **GetX** for powerful local reactive state management and state lifecycle tracking.</p>
+          <div class="project-tags"><span>GetX</span><span>Local Auth</span></div>
+          <a class="btn-small" href="https://github.com/naim174/money_manager" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </article>
+
+        <!-- Project 4: Halal Cart -->
         <article class="project card">
-          <div class="project-thumb">Halal Cart</div>
+          <div class="project-thumb"><i class="fas fa-shopping-cart" style="font-size: 35px;"></i></div>
           <h3>Halal Cart</h3>
-          <p>eCommerce app UI.</p>
-          <a class="link" href="https://github.com/naim174/halal_cart" target="_blank">GitHub</a>
+          <p>A full-stack e-commerce app UI integrated with **Dio HTTP Client** for rapid REST API calling and secure multi-vendor **Payment Management** checkouts.</p>
+          <div class="project-tags"><span>Dio API</span><span>Payment Gateway</span></div>
+          <a class="btn-small" href="https://github.com/naim174/halal_cart" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </article>
+
+        <!-- Project 5: NotesPad -->
+        <article class="project card">
+          <div class="project-thumb"><i class="fas fa-sticky-note" style="font-size: 35px;"></i></div>
+          <h3>NotesPad</h3>
+          <p>A beautiful, fully-functional note-taking utility application with integrated search architecture, custom filtering options, and fast runtime actions.</p>
+          <div class="project-tags"><span>Flutter</span><span>UI/UX</span></div>
+          <a class="btn-small" href="https://github.com/naim174/NotesPad_App" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </article>
+
       </div>
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="sec-title">Contact</h2>
+      <h2 class="sec-title">Let's Connect</h2>
       <div class="contact-inner">
         
         <form class="contact-form glass-card">
           <div class="input-group">
             <label>Name</label>
-            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Your Name" required />
           </div>
           <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="your.email@example.com" />
+            <input type="email" placeholder="your.email@example.com" required />
           </div>
           <div class="input-group">
             <label>Message</label>
-            <textarea placeholder="Your message..." rows="4"></textarea>
+            <textarea placeholder="Your message..." rows="4" required></textarea>
           </div>
-          <button class="btn send-btn" type="button">
+          <button class="btn send-btn" type="submit">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
         </form>
 
         <div class="connect-card glass-card">
-          <h3>Connect with me</h3>
-          <p>Feel free to reach out through any of these platforms:</p>
+          <h3>Drop a Line</h3>
+          <p>I am available for full-time roles, freelance gigs, and technical collaborations.</p>
           
-          <div class="social-icons-large">
-            <a href="https://www.facebook.com/share/1DWoBHTJSi/"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/naim174" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="http://www.linkedin.com/in/md-naim-241721363"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-
+         <div class="social-icons-large">
+  <a href="https://www.facebook.com/share/1DWoBHTJSi/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/naim_hasan0?utm_source=qr&igsh=OHkyOXBuaGJydG1i" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://github.com/naim174" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="http://www.linkedin.com/in/md-naim-241721363" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
           <div class="email-info">
-            <span>Email</span>
+            <span>Email Me Directly</span>
             <a href="mailto:naimmolla278@email.com">naimmolla278@email.com</a>
           </div>
         </div>
@@ -131,8 +173,11 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container"><p>© 2026 Md Naim Molla. All rights reserved.</p></div>
+    <div class="container"><p>© <span id="year"></span> Md Naim Molla. All rights reserved.</p></div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

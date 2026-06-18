@@ -1,23 +1,31 @@
-// small UI interactions: year & mobile nav toggle
-document.getElementById('year').innerText = new Date().getFullYear();
+
+const yearSpan = document.getElementById('year');
+if(yearSpan) {
+  yearSpan.innerText = new Date().getFullYear();
+}
+
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  if(navLinks.classList.contains('open')){
-    navLinks.style.display = 'flex';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.position = 'absolute';
-    navLinks.style.right = '20px';
-    navLinks.style.top = '64px';
-    navLinks.style.background = 'rgba(6,8,17,0.9)';
-    navLinks.style.padding = '14px';
-    navLinks.style.borderRadius = '8px';
-  } else {
-    navLinks.style.display = '';
-    navLinks.style.position = '';
-    navLinks.style.background = '';
-  }
-});
+if(hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    
+   
+    const icon = hamburger.querySelector('i');
+    if(navLinks.classList.contains('open')) {
+      icon.className = 'fas fa-times';
+    } else {
+      icon.className = 'fas fa-bars';
+    }
+  });
+
+ 
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.querySelector('i').className = 'fas fa-bars';
+    });
+  });
+}
